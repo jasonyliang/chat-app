@@ -13,6 +13,7 @@
 		EB1139862123D9DB00CF2E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1139842123D9DB00CF2E65 /* Main.storyboard */; };
 		EB1139882123D9DB00CF2E65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1139872123D9DB00CF2E65 /* Assets.xcassets */; };
 		EB11398B2123D9DB00CF2E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1139892123D9DB00CF2E65 /* LaunchScreen.storyboard */; };
+		EB1139962127D75100CF2E65 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1139952127D75100CF2E65 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		EB1139872123D9DB00CF2E65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB11398A2123D9DB00CF2E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB11398C2123D9DB00CF2E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1139932127D75000CF2E65 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
+		EB1139942127D75100CF2E65 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		EB1139952127D75100CF2E65 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		EB1139742123D9DB00CF2E65 = {
 			isa = PBXGroup;
 			children = (
+				EB1139922127D71A00CF2E65 /* Supporting FIles */,
 				EB11397F2123D9DB00CF2E65 /* Smack */,
 				EB11397E2123D9DB00CF2E65 /* Products */,
 				EC40CFE472ECC72CB1029163 /* Pods */,
@@ -77,6 +82,16 @@
 				EB11398C2123D9DB00CF2E65 /* Info.plist */,
 			);
 			path = Smack;
+			sourceTree = "<group>";
+		};
+		EB1139922127D71A00CF2E65 /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				EB1139942127D75100CF2E65 /* SWRevealViewController.h */,
+				EB1139952127D75100CF2E65 /* SWRevealViewController.m */,
+				EB1139932127D75000CF2E65 /* Smack-Bridging-Header.h */,
+			);
+			path = "Supporting FIles";
 			sourceTree = "<group>";
 		};
 		EC40CFE472ECC72CB1029163 /* Pods */ = {
@@ -122,6 +137,7 @@
 				TargetAttributes = {
 					EB11397C2123D9DB00CF2E65 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,6 +225,7 @@
 			files = (
 				EB1139832123D9DB00CF2E65 /* ViewController.swift in Sources */,
 				EB1139812123D9DB00CF2E65 /* AppDelegate.swift in Sources */,
+				EB1139962127D75100CF2E65 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,11 +363,14 @@
 			baseConfigurationReference = AF6E4C9342190ED8A2CB5AB4 /* Pods-Smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonpractice.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting FIles/Smack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,11 +381,13 @@
 			baseConfigurationReference = BA1818FCDBEEDF6FD0F9780E /* Pods-Smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jasonpractice.Smack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting FIles/Smack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
